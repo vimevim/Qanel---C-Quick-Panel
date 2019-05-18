@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cSharpQuickPanel
 {
-    public partial class Form1 : Form
+    public partial class panelVertical : Form
     {
-        public Form1()
+        public panelVertical()
         {
             InitializeComponent();
         }
