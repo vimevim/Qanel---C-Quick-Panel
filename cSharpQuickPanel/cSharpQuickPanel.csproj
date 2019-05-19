@@ -66,6 +66,9 @@
     <EmbeddedResource Include="panelHorizontal.resx">
       <DependentUpon>panelHorizontal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="panelVertical.resx">
+      <DependentUpon>panelVertical.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

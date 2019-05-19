@@ -39,12 +39,24 @@
             this.kepenkKapat = new System.Windows.Forms.Timer(this.components);
             this.kepenkAc = new System.Windows.Forms.Timer(this.components);
             this.buttonElipse1 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse2 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse3 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse4 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse5 = new cSharpQuickPanel.ButtonElipse();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.option1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.option2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.option3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.option4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dots1
             // 
             this.dots1.AutoSize = true;
+            this.dots1.Enabled = false;
             this.dots1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dots1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.dots1.Location = new System.Drawing.Point(20, 10);
@@ -56,6 +68,7 @@
             // dots2
             // 
             this.dots2.AutoSize = true;
+            this.dots2.Enabled = false;
             this.dots2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dots2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.dots2.Location = new System.Drawing.Point(318, 10);
@@ -67,6 +80,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(0, 117);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 3);
@@ -78,6 +92,7 @@
             this.panel2.Controls.Add(this.lineUp);
             this.panel2.Controls.Add(this.lineMiddle);
             this.panel2.Controls.Add(this.lineDown);
+            this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(0, 120);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 30);
@@ -133,18 +148,109 @@
             // 
             this.buttonElipse1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse1.Location = new System.Drawing.Point(45, 45);
+            this.buttonElipse1.Location = new System.Drawing.Point(25, 50);
             this.buttonElipse1.Name = "buttonElipse1";
             this.buttonElipse1.Size = new System.Drawing.Size(50, 50);
             this.buttonElipse1.TabIndex = 3;
             this.buttonElipse1.Text = "btn1";
             this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
+            // buttonElipse2
+            // 
+            this.buttonElipse2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse2.Location = new System.Drawing.Point(100, 50);
+            this.buttonElipse2.Name = "buttonElipse2";
+            this.buttonElipse2.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse2.TabIndex = 3;
+            this.buttonElipse2.Text = "btn1";
+            this.buttonElipse2.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse3
+            // 
+            this.buttonElipse3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse3.Location = new System.Drawing.Point(175, 50);
+            this.buttonElipse3.Name = "buttonElipse3";
+            this.buttonElipse3.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse3.TabIndex = 3;
+            this.buttonElipse3.Text = "btn1";
+            this.buttonElipse3.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse4
+            // 
+            this.buttonElipse4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse4.Location = new System.Drawing.Point(250, 50);
+            this.buttonElipse4.Name = "buttonElipse4";
+            this.buttonElipse4.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse4.TabIndex = 3;
+            this.buttonElipse4.Text = "btn1";
+            this.buttonElipse4.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse5
+            // 
+            this.buttonElipse5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse5.Location = new System.Drawing.Point(325, 50);
+            this.buttonElipse5.Name = "buttonElipse5";
+            this.buttonElipse5.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse5.TabIndex = 3;
+            this.buttonElipse5.Text = "btn1";
+            this.buttonElipse5.UseVisualStyleBackColor = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.option1ToolStripMenuItem,
+            this.option2ToolStripMenuItem,
+            this.option3ToolStripMenuItem,
+            this.option4ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // option1ToolStripMenuItem
+            // 
+            this.option1ToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.option1ToolStripMenuItem.Text = "exit";
+            this.option1ToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // option2ToolStripMenuItem
+            // 
+            this.option2ToolStripMenuItem.Name = "option2ToolStripMenuItem";
+            this.option2ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.option2ToolStripMenuItem.Text = "option2";
+            // 
+            // option3ToolStripMenuItem
+            // 
+            this.option3ToolStripMenuItem.Name = "option3ToolStripMenuItem";
+            this.option3ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.option3ToolStripMenuItem.Text = "option3";
+            // 
+            // option4ToolStripMenuItem
+            // 
+            this.option4ToolStripMenuItem.Name = "option4ToolStripMenuItem";
+            this.option4ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.option4ToolStripMenuItem.Text = "option4";
+            // 
             // panelHorizontal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(400, 150);
+            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.buttonElipse5);
+            this.Controls.Add(this.buttonElipse4);
+            this.Controls.Add(this.buttonElipse3);
+            this.Controls.Add(this.buttonElipse2);
             this.Controls.Add(this.buttonElipse1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -161,6 +267,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +285,15 @@
         private ButtonElipse buttonElipse1;
         private System.Windows.Forms.Timer kepenkKapat;
         private System.Windows.Forms.Timer kepenkAc;
+        private ButtonElipse buttonElipse2;
+        private ButtonElipse buttonElipse3;
+        private ButtonElipse buttonElipse4;
+        private ButtonElipse buttonElipse5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem option1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem option2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem option3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem option4ToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
