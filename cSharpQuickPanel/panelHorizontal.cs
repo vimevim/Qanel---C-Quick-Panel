@@ -20,7 +20,7 @@ namespace cSharpQuickPanel
         private void panelHorizontal_Load(object sender, EventArgs e)
         {
             this.Location = new Point(0, 0);
-            this.Size = new Size(400, 15);
+            this.Size = new Size(400, 5);
         }
 
         private void panelHorizontal_MouseClick(object sender, MouseEventArgs e)
@@ -35,7 +35,10 @@ namespace cSharpQuickPanel
             if (e.Button == MouseButtons.Left)
             {
                 mouseDownLocation = e.Location;
-                this.Size = new Size(400, 150);
+            }
+            if(this.Height == 5)
+            {
+                kepenkKapat.Start();
             }
         }
         private void panelHorizontal_MouseMove(object sender, MouseEventArgs e)
@@ -49,12 +52,34 @@ namespace cSharpQuickPanel
 
         private void panelHorizontal_MouseUp(object sender, MouseEventArgs e)
         {
-            this.Size = new Size(400, 15);
+            kepenkKapat.Start();
         }
 
         private void panelHorizontal_MouseLeave(object sender, EventArgs e)
         {
-            this.Size = new Size(400, 15);
+
+            if (this.Height == 150)
+            {
+                kepenkAc.Start();
+            }
+        }
+
+        private void kepenkAc_Tick(object sender, EventArgs e)
+        {
+            this.Height += 5;
+            if(this.Height==150)
+            {
+                kepenkKapat.Stop();
+            }
+        }
+
+        private void kepenkKapat_Tick(object sender, EventArgs e)
+        {
+            this.Height -= 5;
+            if (this.Height == 5)
+            {
+                kepenkAc.Stop();
+            }
         }
     }
 }

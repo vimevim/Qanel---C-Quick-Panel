@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dots1 = new System.Windows.Forms.Label();
             this.dots2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -35,6 +36,9 @@
             this.lineUp = new System.Windows.Forms.Label();
             this.lineMiddle = new System.Windows.Forms.Label();
             this.lineDown = new System.Windows.Forms.Label();
+            this.kepenkKapat = new System.Windows.Forms.Timer(this.components);
+            this.kepenkAc = new System.Windows.Forms.Timer(this.components);
+            this.buttonElipse1 = new cSharpQuickPanel.ButtonElipse();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,11 +119,33 @@
             this.lineDown.TabIndex = 3;
             this.lineDown.Text = "__";
             // 
+            // kepenkKapat
+            // 
+            this.kepenkKapat.Interval = 10;
+            this.kepenkKapat.Tick += new System.EventHandler(this.kepenkAc_Tick);
+            // 
+            // kepenkAc
+            // 
+            this.kepenkAc.Interval = 10;
+            this.kepenkAc.Tick += new System.EventHandler(this.kepenkKapat_Tick);
+            // 
+            // buttonElipse1
+            // 
+            this.buttonElipse1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse1.Location = new System.Drawing.Point(45, 45);
+            this.buttonElipse1.Name = "buttonElipse1";
+            this.buttonElipse1.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse1.TabIndex = 3;
+            this.buttonElipse1.Text = "btn1";
+            this.buttonElipse1.UseVisualStyleBackColor = false;
+            // 
             // panelHorizontal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(400, 150);
+            this.Controls.Add(this.buttonElipse1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dots2);
@@ -128,6 +154,7 @@
             this.Name = "panelHorizontal";
             this.ShowInTaskbar = false;
             this.Text = "Form1";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.panelHorizontal_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.MouseLeave += new System.EventHandler(this.panelHorizontal_MouseLeave);
@@ -148,6 +175,8 @@
         private System.Windows.Forms.Label lineMiddle;
         private System.Windows.Forms.Label lineDown;
         private System.Windows.Forms.Label lineUp;
-
+        private ButtonElipse buttonElipse1;
+        private System.Windows.Forms.Timer kepenkKapat;
+        private System.Windows.Forms.Timer kepenkAc;
     }
 }
