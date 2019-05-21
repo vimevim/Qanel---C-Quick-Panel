@@ -36,6 +36,7 @@
             this.dots1 = new System.Windows.Forms.Label();
             this.kepenkKapat = new System.Windows.Forms.Timer(this.components);
             this.kepenkAc = new System.Windows.Forms.Timer(this.components);
+            this.sleepModeActivate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // buttonElipse1
@@ -102,6 +103,11 @@
             this.kepenkAc.Interval = 10;
             this.kepenkAc.Tick += new System.EventHandler(this.kepenkAc_Tick);
             // 
+            // sleepModeActivate
+            // 
+            this.sleepModeActivate.Interval = 1000;
+            this.sleepModeActivate.Tick += new System.EventHandler(this.sleepModeActivate_Tick);
+            // 
             // panelVertical
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -119,7 +125,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.panelVertical_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
-            this.MouseLeave += new System.EventHandler(this.panelVertical_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelVertical_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,5 +140,6 @@
         private System.Windows.Forms.Label dots1;
         private System.Windows.Forms.Timer kepenkKapat;
         private System.Windows.Forms.Timer kepenkAc;
+        private System.Windows.Forms.Timer sleepModeActivate;
     }
 }

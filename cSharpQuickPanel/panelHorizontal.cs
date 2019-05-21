@@ -34,8 +34,11 @@ namespace cSharpQuickPanel
             if (this.Height == 5)
             {
                 kepenkKapat.Start();
+                sleepModeActivate.Start();
             }
         }
+
+        Point birinciDeger, ikinciDeger, sonDeger;
 
         private void panelHorizontal_MouseMove(object sender, MouseEventArgs e)
         {
@@ -43,14 +46,19 @@ namespace cSharpQuickPanel
             {
                 this.Left = (e.X + this.Left - mouseDownLocation.X);
             }
+            birinciDeger = new Point(e.X, e.Y);
         }
 
-        private void panelHorizontal_MouseLeave(object sender, EventArgs e)
+        private void sleepModeActivate_Tick(object sender, EventArgs e)
         {
-
-            if (this.Height == 150)
+            sonDeger = ikinciDeger;
+            ikinciDeger = birinciDeger;
+            if (birinciDeger == sonDeger)
             {
-                kepenkAc.Start();
+                if (this.Height == 150)
+                {
+                    kepenkAc.Start();
+                }
             }
         }
 
@@ -76,5 +84,7 @@ namespace cSharpQuickPanel
         {
             Application.Exit();
         }
+
+
     }
 }

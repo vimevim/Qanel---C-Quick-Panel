@@ -55,6 +55,12 @@
     <Compile Include="panelHorizontal.Designer.cs">
       <DependentUpon>panelHorizontal.cs</DependentUpon>
     </Compile>
+    <Compile Include="panelLeft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panelLeft.Designer.cs">
+      <DependentUpon>panelLeft.cs</DependentUpon>
+    </Compile>
     <Compile Include="panelVertical.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="panelHorizontal.resx">
       <DependentUpon>panelHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panelLeft.resx">
+      <DependentUpon>panelLeft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="panelVertical.resx">
       <DependentUpon>panelVertical.cs</DependentUpon>

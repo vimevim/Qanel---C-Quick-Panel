@@ -44,11 +44,12 @@
             this.buttonElipse4 = new cSharpQuickPanel.ButtonElipse();
             this.buttonElipse5 = new cSharpQuickPanel.ButtonElipse();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.option1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.option2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.option3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.option4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.sleepModeActivate = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -208,18 +209,12 @@
             this.option3ToolStripMenuItem,
             this.option4ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(131, 100);
             // 
             // option1ToolStripMenuItem
             // 
-            this.option1ToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.option1ToolStripMenuItem.Name = "option1ToolStripMenuItem";
+            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.option1ToolStripMenuItem.Text = "exit";
             this.option1ToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -240,6 +235,17 @@
             this.option4ToolStripMenuItem.Name = "option4ToolStripMenuItem";
             this.option4ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.option4ToolStripMenuItem.Text = "option4";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // sleepModeActivate
+            // 
+            this.sleepModeActivate.Interval = 1000;
+            this.sleepModeActivate.Tick += new System.EventHandler(this.sleepModeActivate_Tick);
             // 
             // panelHorizontal
             // 
@@ -263,7 +269,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.panelHorizontal_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
-            this.MouseLeave += new System.EventHandler(this.panelHorizontal_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -295,5 +300,6 @@
         private System.Windows.Forms.ToolStripMenuItem option3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem option4ToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Timer sleepModeActivate;
     }
 }
