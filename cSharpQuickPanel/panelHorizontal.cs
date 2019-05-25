@@ -33,7 +33,7 @@ namespace cSharpQuickPanel
             }
             if (this.Height == 5)
             {
-                kepenkKapat.Start();
+                kepenkAc.Start();
                 sleepModeActivate.Start();
             }
         }
@@ -57,7 +57,7 @@ namespace cSharpQuickPanel
             {
                 if (this.Height == 150)
                 {
-                    kepenkAc.Start();
+                    kepenkKapat.Start();
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace cSharpQuickPanel
             this.Height += 5;
             if (this.Height == 150)
             {
-                kepenkKapat.Stop();
+                kepenkAc.Stop();
             }
         }
 
@@ -76,15 +76,8 @@ namespace cSharpQuickPanel
             this.Height -= 5;
             if (this.Height == 5)
             {
-                kepenkAc.Stop();
+                kepenkKapat.Stop();
             }
         }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
     }
 }

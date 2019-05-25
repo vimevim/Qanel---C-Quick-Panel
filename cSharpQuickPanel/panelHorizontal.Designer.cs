@@ -43,15 +43,8 @@
             this.buttonElipse3 = new cSharpQuickPanel.ButtonElipse();
             this.buttonElipse4 = new cSharpQuickPanel.ButtonElipse();
             this.buttonElipse5 = new cSharpQuickPanel.ButtonElipse();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.option1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.option2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.option3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.option4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.sleepModeActivate = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dots1
@@ -138,12 +131,12 @@
             // kepenkKapat
             // 
             this.kepenkKapat.Interval = 10;
-            this.kepenkKapat.Tick += new System.EventHandler(this.kepenkAc_Tick);
+            this.kepenkKapat.Tick += new System.EventHandler(this.kepenkKapat_Tick);
             // 
             // kepenkAc
             // 
             this.kepenkAc.Interval = 10;
-            this.kepenkAc.Tick += new System.EventHandler(this.kepenkKapat_Tick);
+            this.kepenkAc.Tick += new System.EventHandler(this.kepenkAc_Tick);
             // 
             // buttonElipse1
             // 
@@ -200,48 +193,6 @@
             this.buttonElipse5.Text = "btn1";
             this.buttonElipse5.UseVisualStyleBackColor = false;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.option1ToolStripMenuItem,
-            this.option2ToolStripMenuItem,
-            this.option3ToolStripMenuItem,
-            this.option4ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(131, 100);
-            // 
-            // option1ToolStripMenuItem
-            // 
-            this.option1ToolStripMenuItem.Name = "option1ToolStripMenuItem";
-            this.option1ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.option1ToolStripMenuItem.Text = "exit";
-            this.option1ToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // option2ToolStripMenuItem
-            // 
-            this.option2ToolStripMenuItem.Name = "option2ToolStripMenuItem";
-            this.option2ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.option2ToolStripMenuItem.Text = "option2";
-            // 
-            // option3ToolStripMenuItem
-            // 
-            this.option3ToolStripMenuItem.Name = "option3ToolStripMenuItem";
-            this.option3ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.option3ToolStripMenuItem.Text = "option3";
-            // 
-            // option4ToolStripMenuItem
-            // 
-            this.option4ToolStripMenuItem.Name = "option4ToolStripMenuItem";
-            this.option4ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.option4ToolStripMenuItem.Text = "option4";
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
             // sleepModeActivate
             // 
             this.sleepModeActivate.Interval = 1000;
@@ -252,7 +203,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(400, 150);
-            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.buttonElipse5);
             this.Controls.Add(this.buttonElipse4);
             this.Controls.Add(this.buttonElipse3);
@@ -272,7 +222,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,12 +243,6 @@
         private ButtonElipse buttonElipse3;
         private ButtonElipse buttonElipse4;
         private ButtonElipse buttonElipse5;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem option1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem option2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem option3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem option4ToolStripMenuItem;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Timer sleepModeActivate;
     }
 }
