@@ -82,9 +82,8 @@ namespace cSharpQuickPanel
             if (this.Width == 5)
             {
                 kepenkKapat.Stop();
+                sleepModeActivate.Stop();
             }
         }
-
-
     }
 }

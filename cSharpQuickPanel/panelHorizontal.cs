@@ -77,6 +77,7 @@ namespace cSharpQuickPanel
             if (this.Height == 5)
             {
                 kepenkKapat.Stop();
+                sleepModeActivate.Stop();
             }
         }
     }
