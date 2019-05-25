@@ -38,7 +38,7 @@ namespace cSharpQuickPanel
             }
         }
 
-        Point birinciDeger, ikinciDeger, sonDeger;
+        Point saniye5, saniye4, saniye3, saniye2, saniye1;
 
         private void panelHorizontal_MouseMove(object sender, MouseEventArgs e)
         {
@@ -46,18 +46,30 @@ namespace cSharpQuickPanel
             {
                 this.Left = (e.X + this.Left - mouseDownLocation.X);
             }
-            birinciDeger = new Point(e.X, e.Y);
+            saniye1 = new Point(e.X, e.Y);
         }
 
         private void sleepModeActivate_Tick(object sender, EventArgs e)
         {
-            sonDeger = ikinciDeger;
-            ikinciDeger = birinciDeger;
-            if (birinciDeger == sonDeger)
+            saniye5 = saniye4;
+            saniye4 = saniye3;
+            saniye3 = saniye2;
+            saniye2 = saniye1;
+            if (saniye1 == saniye5)
             {
                 if (this.Height == 150)
                 {
                     kepenkKapat.Start();
+                }
+            }
+            else
+            {
+                if (Cursor.Position.X < this.Left || Cursor.Position.X > (this.Left + this.Width) || Cursor.Position.Y < this.Top || Cursor.Position.Y > (this.Top + this.Height))
+                {
+                    if (this.Height == 150)
+                    {
+                        kepenkKapat.Start();
+                    }
                 }
             }
         }
