@@ -16,7 +16,7 @@ namespace cSharpQuickPanel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new panelVertical());
+            Application.Run(new panelHorizontal());
         }
     }
 }
