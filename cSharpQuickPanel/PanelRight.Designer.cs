@@ -1,6 +1,6 @@
 ﻿namespace cSharpQuickPanel
 {
-    partial class panelVertical
+    partial class PanelRight
     {
         /// <summary>
         /// Required designer variable.
@@ -108,7 +108,7 @@
             this.sleepModeActivate.Interval = 1000;
             this.sleepModeActivate.Tick += new System.EventHandler(this.sleepModeActivate_Tick);
             // 
-            // panelVertical
+            // PanelRight
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
@@ -120,12 +120,11 @@
             this.Controls.Add(this.dots1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "panelVertical";
-            this.Text = "panelVertical";
+            this.Name = "PanelRight";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.panelVertical_Load);
+            this.Load += new System.EventHandler(this.PanelRight_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelVertical_MouseMove);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelRight_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

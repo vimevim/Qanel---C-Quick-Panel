@@ -1,6 +1,6 @@
 ﻿namespace cSharpQuickPanel
 {
-    partial class panelHorizontal
+    partial class PanelTop
     {
         /// <summary>
         /// Required designer variable.
@@ -197,7 +197,7 @@
             this.buttonElipse1.Text = "btn1";
             this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
-            // panelHorizontal
+            // PanelTop
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
@@ -212,13 +212,12 @@
             this.Controls.Add(this.dots2);
             this.Controls.Add(this.dots1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "panelHorizontal";
+            this.Name = "PanelTop";
             this.ShowInTaskbar = false;
-            this.Text = "Form1";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.panelHorizontal_Load);
+            this.Load += new System.EventHandler(this.PanelTop_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelTop_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
