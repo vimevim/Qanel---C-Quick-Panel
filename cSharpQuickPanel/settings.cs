@@ -109,7 +109,9 @@ namespace cSharpQuickPanel
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            ayarlar.Default.panelMod = "top";
+            ayarlar.Default.Save();
+            panel.Changes();
         }
     }
 }

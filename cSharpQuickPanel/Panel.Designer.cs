@@ -36,6 +36,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonElipse1 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse2 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse3 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse4 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse5 = new cSharpQuickPanel.ButtonElipse();
             this.SuspendLayout();
             // 
             // dots2
@@ -106,19 +110,67 @@
             this.buttonElipse1.Text = "btn1";
             this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
-            // PanelLeft
+            // buttonElipse2
+            // 
+            this.buttonElipse2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse2.Location = new System.Drawing.Point(50, 106);
+            this.buttonElipse2.Name = "buttonElipse2";
+            this.buttonElipse2.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse2.TabIndex = 8;
+            this.buttonElipse2.Text = "btn1";
+            this.buttonElipse2.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse3
+            // 
+            this.buttonElipse3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse3.Location = new System.Drawing.Point(50, 162);
+            this.buttonElipse3.Name = "buttonElipse3";
+            this.buttonElipse3.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse3.TabIndex = 8;
+            this.buttonElipse3.Text = "btn1";
+            this.buttonElipse3.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse4
+            // 
+            this.buttonElipse4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse4.Location = new System.Drawing.Point(50, 218);
+            this.buttonElipse4.Name = "buttonElipse4";
+            this.buttonElipse4.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse4.TabIndex = 8;
+            this.buttonElipse4.Text = "btn1";
+            this.buttonElipse4.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse5
+            // 
+            this.buttonElipse5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse5.Location = new System.Drawing.Point(50, 274);
+            this.buttonElipse5.Name = "buttonElipse5";
+            this.buttonElipse5.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse5.TabIndex = 8;
+            this.buttonElipse5.Text = "btn1";
+            this.buttonElipse5.UseVisualStyleBackColor = false;
+            // 
+            // Panel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = global::cSharpQuickPanel.ayarlar.Default.renk;
             this.ClientSize = new System.Drawing.Size(150, 400);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonElipse5);
+            this.Controls.Add(this.buttonElipse4);
+            this.Controls.Add(this.buttonElipse3);
+            this.Controls.Add(this.buttonElipse2);
             this.Controls.Add(this.buttonElipse1);
             this.Controls.Add(this.dots2);
             this.Controls.Add(this.dots1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PanelLeft";
+            this.Name = "Panel";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Panel_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
@@ -138,5 +190,9 @@
         private System.Windows.Forms.Timer sleepModeActivate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private ButtonElipse buttonElipse2;
+        private ButtonElipse buttonElipse3;
+        private ButtonElipse buttonElipse4;
+        private ButtonElipse buttonElipse5;
     }
 }

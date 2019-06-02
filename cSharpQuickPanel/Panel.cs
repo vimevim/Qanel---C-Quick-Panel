@@ -17,32 +17,99 @@ namespace cSharpQuickPanel
             InitializeComponent();
         }
         public void Panel_Load(object sender, EventArgs e)
-        {           
-            this.Width = 5;
+        {
             Changes();
-
         }
         public void Changes()
         {
-            this.Height = ayarlar.Default.size;
+            kepenkKapat.Stop();
             this.Visible = ayarlar.Default.visibility;
             this.Opacity = ayarlar.Default.opacity;
             this.BackColor = ayarlar.Default.renk;
-            if(ayarlar.Default.panelMod=="left")
+            if (ayarlar.Default.panelMod == "left")
             {
+                this.Top = 10;
+                this.Height = ayarlar.Default.size;
+                this.Width = 5;
                 this.Left = 0;
-                dots2.Left = 30;
-                dots1.Left = 30;
+                dots1.Visible = false;
+                dots2.Visible = false;
                 panel2.Left = 120;
+                panel2.Top = 0;
+                panel1.Top = 0;
                 panel1.Left = 117;
+                panel1.Width = 3;
+                panel1.Height = 400;
+                panel2.Width = 30;
+                panel2.Height = 400;
+                buttonElipse1.Left = 50;
+                buttonElipse2.Left = 50;
+                buttonElipse3.Left = 50;
+                buttonElipse4.Left = 50;
+                buttonElipse5.Left = 50;
+                buttonElipse1.Top = 25;
+                buttonElipse2.Top = 100;
+                buttonElipse3.Top = 175;
+                buttonElipse4.Top = 250;
+                buttonElipse5.Top = 325;
             }
-            else if(ayarlar.Default.panelMod=="right")
+            else if (ayarlar.Default.panelMod == "right")
             {
+                this.Top = 10;
+                this.Height = ayarlar.Default.size;
+                this.Width = 5;
                 this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
-                dots2.Left = 58;
-                dots1.Left = 58;
+                dots1.Visible = false;
+                dots2.Visible = false;
                 panel2.Left = 0;
                 panel1.Left = 30;
+                panel1.Top = 0;
+                panel2.Top = 0;
+                panel1.Width = 3;
+                panel1.Height = 400;
+                panel2.Width = 30;
+                panel2.Height = 400;
+                buttonElipse1.Left = 50;
+                buttonElipse2.Left = 50;
+                buttonElipse3.Left = 50;
+                buttonElipse4.Left = 50;
+                buttonElipse5.Left = 50;
+                buttonElipse1.Top = 25;
+                buttonElipse2.Top = 100;
+                buttonElipse3.Top = 175;
+                buttonElipse4.Top = 250;
+                buttonElipse5.Top = 325;
+            }
+            else if (ayarlar.Default.panelMod == "top")
+            {
+                this.Left = 10;
+                this.Width = ayarlar.Default.size;
+                this.Top = 0;
+                this.Height = 5;
+                dots1.Visible = true;
+                dots2.Visible = true;
+                dots2.Top = 10;
+                dots1.Top = 10;
+                dots2.Left = 20;
+                dots1.Left = 318;
+                panel1.Width = 400;
+                panel1.Height = 3;
+                panel2.Width = 400;
+                panel2.Height = 30;
+                panel1.Left = 0;
+                panel2.Left = 0;
+                panel1.Top = 117;
+                panel2.Top = 120;
+                buttonElipse1.Top = 50;
+                buttonElipse2.Top = 50;
+                buttonElipse3.Top = 50;
+                buttonElipse4.Top = 50;
+                buttonElipse5.Top = 50;
+                buttonElipse1.Left = 25;
+                buttonElipse2.Left = 100;
+                buttonElipse3.Left = 175;
+                buttonElipse4.Left = 250;
+                buttonElipse5.Left = 325;
             }
         }
         Point mouseDownLocation;
@@ -53,7 +120,8 @@ namespace cSharpQuickPanel
             {
                 mouseDownLocation = e.Location;
             }
-            if (this.Width == 5)
+
+            if (this.Width == 5 || this.Height == 5)
             {
                 kepenkAc.Start();
                 sleepModeActivate.Start();
@@ -66,7 +134,14 @@ namespace cSharpQuickPanel
         {
             if (e.Button == MouseButtons.Left)
             {
-                this.Top = (e.Y + this.Top - mouseDownLocation.Y);
+                if (ayarlar.Default.panelMod == "top")
+                {
+                    this.Left = (e.X + this.Left - mouseDownLocation.X);
+                }
+                else
+                {
+                    this.Top = (e.Y + this.Top - mouseDownLocation.Y);
+                }
             }
             saniye1 = new Point(e.X, e.Y);
         }
@@ -79,7 +154,7 @@ namespace cSharpQuickPanel
             saniye2 = saniye1;
             if (saniye1 == saniye5)
             {
-                if (this.Width == 150)
+                if (this.Width == 150 || this.Height == 150)
                 {
                     kepenkKapat.Start();
                 }
@@ -88,7 +163,7 @@ namespace cSharpQuickPanel
             {
                 if (Cursor.Position.X < this.Left || Cursor.Position.X > (this.Left + this.Width) || Cursor.Position.Y < this.Top || Cursor.Position.Y > (this.Top + this.Height))
                 {
-                    if (this.Width == 150)
+                    if (this.Width == 150 || this.Height == 150)
                     {
                         kepenkKapat.Start();
                     }
@@ -99,36 +174,67 @@ namespace cSharpQuickPanel
 
         private void kepenkAc_Tick(object sender, EventArgs e)
         {
-            this.Width += 5;
-            if(ayarlar.Default.panelMod=="right")
+            if (ayarlar.Default.panelMod == "top")
             {
-                this.Left -= 5;
+                this.Height += 5;
+                if (this.Opacity < 1)
+                {
+                    this.Opacity += 0.05;
+                }
+                if (this.Height == 150)
+                {
+                    kepenkAc.Stop();
+                }
             }
-            if (this.Opacity < 1)
+            else
             {
-                this.Opacity += 0.05;
-            }
-            if (this.Width == 150)
-            {
-                kepenkAc.Stop();
+                this.Width += 5;
+                if (ayarlar.Default.panelMod == "right")
+                {
+                    this.Left -= 5;
+                }
+                if (this.Opacity < 1)
+                {
+                    this.Opacity += 0.05;
+                }
+                if (this.Width == 150)
+                {
+                    kepenkAc.Stop();
+                }
             }
         }
 
         private void kepenkKapat_Tick(object sender, EventArgs e)
         {
-            this.Width -= 5;
-            if(ayarlar.Default.panelMod=="right")
+            if (ayarlar.Default.panelMod == "top")
             {
-                this.Left += 5;
+                this.Height -= 5;
+                if (this.Opacity > ayarlar.Default.opacity)
+                {
+                    this.Opacity -= 0.05;
+                }
+                if (this.Height == 5)
+                {
+                    kepenkKapat.Stop();
+                    sleepModeActivate.Stop();
+                }
             }
-            if (this.Opacity > ayarlar.Default.opacity)
+            else
             {
-                this.Opacity -= 0.05;
-            }
-            if (this.Width == 5)
-            {
-                kepenkKapat.Stop();
-                sleepModeActivate.Stop();
+                this.Width -= 5;
+                if (ayarlar.Default.panelMod == "right")
+                {
+                    this.Left += 5;
+                }
+                if (this.Opacity > ayarlar.Default.opacity)
+                {
+                    this.Opacity -= 0.05;
+                }
+                if (this.Width == 5)
+                {
+                    kepenkKapat.Stop();
+                    sleepModeActivate.Stop();
+                }
             }
         }
     }
