@@ -1,6 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="cSharpQuickPanel" GeneratedClassName="ayarlar">
+  <Profiles />
+  <Settings>
+    <Setting Name="size" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="opacity" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="visibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="renk" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">48, 47, 55</Value>
+    </Setting>
+    <Setting Name="panelMod" Type="System.String" Scope="User">
+      <Value Profile="(Default)">left</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

@@ -54,23 +54,17 @@
     <Compile Include="ButtonElipse.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PanelLeft.cs">
+    <Compile Include="Panel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PanelLeft.Designer.cs">
-      <DependentUpon>PanelLeft.cs</DependentUpon>
+    <Compile Include="Panel.Designer.cs">
+      <DependentUpon>Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelTop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PanelTop.Designer.cs">
       <DependentUpon>PanelTop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PanelRight.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PanelRight.Designer.cs">
-      <DependentUpon>PanelRight.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,14 +74,11 @@
     <Compile Include="settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PanelLeft.resx">
-      <DependentUpon>PanelLeft.cs</DependentUpon>
+    <EmbeddedResource Include="Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelTop.resx">
       <DependentUpon>PanelTop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PanelRight.resx">
-      <DependentUpon>PanelRight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="settings.resx">
+      <DependentUpon>settings.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ayarlar.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ayarlar.Designer.cs</LastGenOutput>

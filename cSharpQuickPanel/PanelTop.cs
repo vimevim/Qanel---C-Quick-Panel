@@ -20,10 +20,16 @@ namespace cSharpQuickPanel
         private void PanelTop_Load(object sender, EventArgs e)
         {
             this.Top = 0;
-            this.Size = new Size(400, 5);
-            this.Opacity = 0.50;
+            this.Height = 5;
+            Changes();
         }
-
+        public void Changes()
+        {
+            this.Width = ayarlar.Default.size;
+            this.Visible = ayarlar.Default.visibility;
+            this.Opacity = ayarlar.Default.opacity;
+            this.BackColor = ayarlar.Default.renk;
+        }
         Point mouseDownLocation;
 
         private void ortak_MouseDown(object sender, MouseEventArgs e)

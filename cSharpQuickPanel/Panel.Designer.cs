@@ -1,6 +1,6 @@
 ﻿namespace cSharpQuickPanel
 {
-    partial class PanelLeft
+    partial class Panel
     {
         /// <summary>
         /// Required designer variable.
@@ -25,7 +25,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.dots2 = new System.Windows.Forms.Label();
@@ -109,7 +109,7 @@
             // PanelLeft
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.BackColor = global::cSharpQuickPanel.ayarlar.Default.renk;
             this.ClientSize = new System.Drawing.Size(150, 400);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -120,9 +120,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PanelLeft";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.PanelLeft_Load);
+            this.Load += new System.EventHandler(this.Panel_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelLeft_MouseMove);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

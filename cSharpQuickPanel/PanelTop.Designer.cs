@@ -200,7 +200,7 @@
             // PanelTop
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.BackColor = ayarlar.Default.renk;
             this.ClientSize = new System.Drawing.Size(400, 150);
             this.Controls.Add(this.buttonElipse5);
             this.Controls.Add(this.buttonElipse4);

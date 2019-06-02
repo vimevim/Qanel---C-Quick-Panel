@@ -10,20 +10,41 @@ using System.Windows.Forms;
 
 namespace cSharpQuickPanel
 {
-    public partial class PanelLeft : Form
+    public partial class Panel : Form
     {
-        public PanelLeft()
+        public Panel()
         {
             InitializeComponent();
         }
-        private void PanelLeft_Load(object sender, EventArgs e)
-        {
+        public void Panel_Load(object sender, EventArgs e)
+        {           
             this.Width = 5;
-            this.Height = 400;
-            this.Left = 0;
-            this.Opacity = 0.50;
-        }
+            Changes();
 
+        }
+        public void Changes()
+        {
+            this.Height = ayarlar.Default.size;
+            this.Visible = ayarlar.Default.visibility;
+            this.Opacity = ayarlar.Default.opacity;
+            this.BackColor = ayarlar.Default.renk;
+            if(ayarlar.Default.panelMod=="left")
+            {
+                this.Left = 0;
+                dots2.Left = 30;
+                dots1.Left = 30;
+                panel2.Left = 120;
+                panel1.Left = 117;
+            }
+            else if(ayarlar.Default.panelMod=="right")
+            {
+                this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
+                dots2.Left = 58;
+                dots1.Left = 58;
+                panel2.Left = 0;
+                panel1.Left = 30;
+            }
+        }
         Point mouseDownLocation;
 
         private void ortak_MouseDown(object sender, MouseEventArgs e)
@@ -41,7 +62,7 @@ namespace cSharpQuickPanel
 
         Point saniye5, saniye4, saniye3, saniye2, saniye1;
 
-        private void PanelLeft_MouseMove(object sender, MouseEventArgs e)
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -78,17 +99,11 @@ namespace cSharpQuickPanel
 
         private void kepenkAc_Tick(object sender, EventArgs e)
         {
-
-            /*
-            this.Width = 150;
-            this.Left -= 5;
-            if (Screen.PrimaryScreen.WorkingArea.Width - this.Width == this.Left)
-            {
-                kepenkAc.Stop();
-            }
-            */
-            //üstteki ve alttaki aynı sonucu veriyor, açılırken yine çirkin oluyor
             this.Width += 5;
+            if(ayarlar.Default.panelMod=="right")
+            {
+                this.Left -= 5;
+            }
             if (this.Opacity < 1)
             {
                 this.Opacity += 0.05;
@@ -102,7 +117,11 @@ namespace cSharpQuickPanel
         private void kepenkKapat_Tick(object sender, EventArgs e)
         {
             this.Width -= 5;
-            if (this.Opacity > 0.50)
+            if(ayarlar.Default.panelMod=="right")
+            {
+                this.Left += 5;
+            }
+            if (this.Opacity > ayarlar.Default.opacity)
             {
                 this.Opacity -= 0.05;
             }
