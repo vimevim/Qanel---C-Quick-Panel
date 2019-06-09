@@ -35,11 +35,11 @@
             this.sleepModeActivate = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonElipse1 = new cSharpQuickPanel.ButtonElipse();
-            this.buttonElipse2 = new cSharpQuickPanel.ButtonElipse();
-            this.buttonElipse3 = new cSharpQuickPanel.ButtonElipse();
-            this.buttonElipse4 = new cSharpQuickPanel.ButtonElipse();
             this.buttonElipse5 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse4 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse3 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse2 = new cSharpQuickPanel.ButtonElipse();
+            this.buttonElipse1 = new cSharpQuickPanel.ButtonElipse();
             this.SuspendLayout();
             // 
             // dots2
@@ -99,38 +99,15 @@
             this.panel1.Size = new System.Drawing.Size(3, 400);
             this.panel1.TabIndex = 9;
             // 
-            // buttonElipse1
+            // buttonElipse5
             // 
-            this.buttonElipse1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse1.Location = new System.Drawing.Point(50, 50);
-            this.buttonElipse1.Name = "buttonElipse1";
-            this.buttonElipse1.Size = new System.Drawing.Size(50, 50);
-            this.buttonElipse1.TabIndex = 8;
-            this.buttonElipse1.Text = "btn1";
-            this.buttonElipse1.UseVisualStyleBackColor = false;
-            // 
-            // buttonElipse2
-            // 
-            this.buttonElipse2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonElipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse2.Location = new System.Drawing.Point(50, 106);
-            this.buttonElipse2.Name = "buttonElipse2";
-            this.buttonElipse2.Size = new System.Drawing.Size(50, 50);
-            this.buttonElipse2.TabIndex = 8;
-            this.buttonElipse2.Text = "btn1";
-            this.buttonElipse2.UseVisualStyleBackColor = false;
-            // 
-            // buttonElipse3
-            // 
-            this.buttonElipse3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonElipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse3.Location = new System.Drawing.Point(50, 162);
-            this.buttonElipse3.Name = "buttonElipse3";
-            this.buttonElipse3.Size = new System.Drawing.Size(50, 50);
-            this.buttonElipse3.TabIndex = 8;
-            this.buttonElipse3.Text = "btn1";
-            this.buttonElipse3.UseVisualStyleBackColor = false;
+            this.buttonElipse5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse5.Location = new System.Drawing.Point(50, 274);
+            this.buttonElipse5.Name = "buttonElipse5";
+            this.buttonElipse5.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse5.TabIndex = 8;
+            this.buttonElipse5.UseVisualStyleBackColor = false;
             // 
             // buttonElipse4
             // 
@@ -140,19 +117,37 @@
             this.buttonElipse4.Name = "buttonElipse4";
             this.buttonElipse4.Size = new System.Drawing.Size(50, 50);
             this.buttonElipse4.TabIndex = 8;
-            this.buttonElipse4.Text = "btn1";
             this.buttonElipse4.UseVisualStyleBackColor = false;
             // 
-            // buttonElipse5
+            // buttonElipse3
             // 
-            this.buttonElipse5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonElipse5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse5.Location = new System.Drawing.Point(50, 274);
-            this.buttonElipse5.Name = "buttonElipse5";
-            this.buttonElipse5.Size = new System.Drawing.Size(50, 50);
-            this.buttonElipse5.TabIndex = 8;
-            this.buttonElipse5.Text = "btn1";
-            this.buttonElipse5.UseVisualStyleBackColor = false;
+            this.buttonElipse3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse3.Location = new System.Drawing.Point(50, 162);
+            this.buttonElipse3.Name = "buttonElipse3";
+            this.buttonElipse3.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse3.TabIndex = 8;
+            this.buttonElipse3.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse2
+            // 
+            this.buttonElipse2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse2.Location = new System.Drawing.Point(50, 106);
+            this.buttonElipse2.Name = "buttonElipse2";
+            this.buttonElipse2.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse2.TabIndex = 8;
+            this.buttonElipse2.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse1
+            // 
+            this.buttonElipse1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse1.Location = new System.Drawing.Point(50, 50);
+            this.buttonElipse1.Name = "buttonElipse1";
+            this.buttonElipse1.Size = new System.Drawing.Size(50, 50);
+            this.buttonElipse1.TabIndex = 8;
+            this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
             // Panel
             // 
