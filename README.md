@@ -1,4 +1,2 @@
-# cSharpQuickPanel
-Herkes kullansın, uygulamalarına dahil edebilsin, ihtiyaçlarını gidersin diye yapılmış basit bir panel.
-
-Android üzerinde yukarıdan aşağı kaydırma yaptığınız zaman ekrana gelen "quick panel" artık windows üzerinde de var. 
+# Qanel - C Sharp Quick Panel
+A simple "quick panel" adaptation for windows for anyone to use in their c# form applicationsbasit bir panel. 
