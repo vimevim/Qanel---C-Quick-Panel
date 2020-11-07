@@ -26,12 +26,11 @@ namespace cSharpQuickPanel
             this.Visible = ayarlar.Default.visibility;
             this.Opacity = ayarlar.Default.opacity;
             this.BackColor = ayarlar.Default.renk;
-            if (ayarlar.Default.panelMod == "left")
+            if (ayarlar.Default.panelMod != "top")
             {
                 this.Top = 10;
                 this.Height = ayarlar.Default.size;
                 this.Width = 5;
-                this.Left = 0;
                 buttonElipse1.Left = 50;
                 buttonElipse2.Left = 50;
                 buttonElipse3.Left = 50;
@@ -42,23 +41,14 @@ namespace cSharpQuickPanel
                 buttonElipse3.Top = 175;
                 buttonElipse4.Top = 250;
                 buttonElipse5.Top = 325;
-            }
-            else if (ayarlar.Default.panelMod == "right")
-            {
-                this.Top = 10;
-                this.Height = ayarlar.Default.size;
-                this.Width = 5;
-                this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
-                buttonElipse1.Left = 50;
-                buttonElipse2.Left = 50;
-                buttonElipse3.Left = 50;
-                buttonElipse4.Left = 50;
-                buttonElipse5.Left = 50;
-                buttonElipse1.Top = 25;
-                buttonElipse2.Top = 100;
-                buttonElipse3.Top = 175;
-                buttonElipse4.Top = 250;
-                buttonElipse5.Top = 325;
+                if (ayarlar.Default.panelMod == "right")
+                {
+                    this.Left = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
+                }
+                else if(ayarlar.Default.panelMod == "left")
+                {
+                    this.Left = 0;
+                }
             }
             else if (ayarlar.Default.panelMod == "top")
             {
@@ -114,6 +104,7 @@ namespace cSharpQuickPanel
 
         private void sleepModeActivate_Tick(object sender, EventArgs e)
         {
+            //eger cursor aynı konumda beş saniye duruyorsa kepenkKapat çalışır
             saniye5 = saniye4;
             saniye4 = saniye3;
             saniye3 = saniye2;
@@ -127,6 +118,7 @@ namespace cSharpQuickPanel
             }
             else
             {
+                //eğer cursor pozisyonu formun üzerinde değilse bu komut çalışır
                 if (Cursor.Position.X < this.Left || Cursor.Position.X > (this.Left + this.Width) || Cursor.Position.Y < this.Top || Cursor.Position.Y > (this.Top + this.Height))
                 {
                     if (this.Width == 150 || this.Height == 150)
