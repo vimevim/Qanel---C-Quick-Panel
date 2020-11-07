@@ -51,7 +51,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ayarlar.settings</DependentUpon>
     </Compile>
-    <Compile Include="ButtonElipse.cs">
+    <Compile Include="ButtonElipse.cs" />
+    <Compile Include="cSharpQuickPanelButtonElipse.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panel.cs">
